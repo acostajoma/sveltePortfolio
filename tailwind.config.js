@@ -2,7 +2,14 @@
 export default {
   content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
-    extend: {}
+    extend: {
+      screens: {
+        'max-lg' : {'max' : '1023px'}
+      }
+    }
   },
-  plugins: []
+  plugins: [require ('daisyui')],
+  daisyui: {
+    themes: ["winter", "night"]
+  }
 };
